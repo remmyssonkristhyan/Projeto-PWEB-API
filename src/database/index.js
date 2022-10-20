@@ -1,4 +1,4 @@
-const enviroment = require('dotenv').config();
+require('dotenv').config();
 const mysql = require("mysql2/promise");
 
 
@@ -9,10 +9,10 @@ const connectToMysql = async () => {
         return global.connection;
 
     const config = {
-        host: enviroment.parsed.HOST,
-        user: enviroment.parsed.USERNAME,
-        password: enviroment.parsed.PASSWORD,
-        database: enviroment.parsed.DATABASE
+        host: process.env.HOST,
+        user: process.env.USER,
+        password: process.env.PASSWORD,
+        database: process.env.DATABASE
     }
 
     const connection = await mysql.createConnection(config);
