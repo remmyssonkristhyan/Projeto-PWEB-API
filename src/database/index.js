@@ -10,7 +10,7 @@ const connectToMysql = async () => {
 
     const config = {
         host: enviroment.parsed.HOST,
-        user: enviroment.parsed.USER,
+        user: enviroment.parsed.USERNAME,
         password: enviroment.parsed.PASSWORD,
         database: enviroment.parsed.DATABASE
     }

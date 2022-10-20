@@ -14,7 +14,7 @@ class bibliotecaService {
         return this.repository.findById(id);
     };
 
-    async createlivro(livro){
+    async createLivro(livro){
         return this.repository.create(livro);
     };
 
